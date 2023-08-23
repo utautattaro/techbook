@@ -13,7 +13,9 @@ jobs:
     - name: install pandoc2review
       run: gem install pandoc2review
     - name: pandoc2review
-      run: pandoc2review ./articles/test.md > ../contents/test.re
+      run: |
+          cd articles
+          pandoc2review test.md > ../contents/test.re
     - name: ls
       run: ls
     - name: pwd
