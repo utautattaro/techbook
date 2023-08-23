@@ -10,6 +10,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: install pandoc2review
+      run: gem install pandoc2review
+    - name: pandoc2review
+      run:pandoc2review .\articles\test.md > .\contents\test.re  
+    - name: cat
+      run: .\contents\test.re  
     - name: build pdf
       run: rake pdf
     - uses: actions/upload-artifact@master
