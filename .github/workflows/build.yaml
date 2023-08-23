@@ -12,8 +12,8 @@ jobs:
     - uses: actions/checkout@master
     - name: install pandoc
       run: | 
-          sudo apt update
-          sudo apt install pandoc
+          apt update
+          apt install pandoc
     - name: install pandoc2review
       run: gem install pandoc2review
     - name: pandoc2review
