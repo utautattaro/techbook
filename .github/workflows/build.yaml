@@ -9,9 +9,7 @@ jobs:
     container: docker://kauplan/review2.5
 
     steps:
-    - uses: actions/checkout@master
-    - name: install pandoc
-      run: apt install pandoc
+    - uses: docker://pandoc/latex:2.9
     - name: install pandoc2review
       run: gem install pandoc2review
     - name: pandoc2review
