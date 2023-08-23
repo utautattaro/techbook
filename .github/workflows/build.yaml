@@ -12,6 +12,7 @@ jobs:
     - uses: docker://pandoc/latex:2.9
     - name: install pandoc2review
       run: gem install pandoc2review
+    - uses: actions/checkout@master
     - name: pandoc2review
       run: |
           cd articles
