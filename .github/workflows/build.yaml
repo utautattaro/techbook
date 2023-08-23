@@ -13,7 +13,7 @@ jobs:
     - name: install pandoc2review
       run: gem install pandoc2review
     - name: pandoc2review
-      run:pandoc2review .\articles\test.md > .\contents\test.re  
+      run: pandoc2review .\articles\test.md > .\contents\test.re  
     - name: cat
       run: .\contents\test.re  
     - name: build pdf
