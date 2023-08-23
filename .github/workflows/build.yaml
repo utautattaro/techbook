@@ -6,13 +6,12 @@ jobs:
   build:
     name: build review pdf
     runs-on: ubuntu-latest
-    container: docker://kauplan/review2.5
+    container: docker://pandoc/latex:2.9
 
     steps:
-    - uses: docker://pandoc/latex:2.9
+    - uses: actions/checkout@master
     - name: install pandoc2review
       run: gem install pandoc2review
-    - uses: actions/checkout@master
     - name: pandoc2review
       run: |
           cd articles
